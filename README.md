@@ -29,26 +29,26 @@ Raspberry PI Model 3 B+ has enough ground Pins for all parts. Only one 5V pin ha
 </p>
 
 #### Micro Servo SG90
-One 5V shared with MAX 4218CNG LED Matrix
+One 5V shared with MAX 4218CNG LED Matrix<br/>
 Data on GPIO 17 / PIN 11
 
 #### MAX 4218CNG LED Matrix
-One 5V shared with MAX 4218CNG LED Matrix
-DIN on GPIO 10 / PIN 19
-CS on GPIO 8 / PIN 24
+One 5V shared with MAX 4218CNG LED Matrix<br/>
+DIN on GPIO 10 / PIN 19<br/>
+CS on GPIO 8 / PIN 24<br/>
 CLK on GPIO 11 / PIN 23
 
 #### L9110 Motor Driver
-VCC on 3.3 
-IA1 on GPIO 26 / PIN 37
+VCC on 3.3 <br/>
+IA1 on GPIO 26 / PIN 37<br/>
 IB1 on GPIO 20 / PIN 38
 
 #### Pizzo Speaker
-VCC on 3.3
+VCC on 3.3<br/>
 GND on GPIO 36 / PIN 16
 
 #### Headphone Jack / Amplifier
-The Headphone Jack uses the Audio Out from the Raspberry PI.
+The Headphone Jack uses the Audio Out from the Raspberry PI.<br/>
 Solder the longest PIN of the Jack to the "I" PIN of the Amplifier Board
 Solder the second longest PIN longest PIN of the Jack to the "R" PIN of the Amplifier Board. We only use one Channel here.
 
@@ -57,7 +57,7 @@ Solder the R OUT PINs the the speaker.
 Use one 5V Pin from the Raspberry PI to power the Amplifier Board
 
 #### Button
-VCC on 3.3 
+VCC on 3.3 <br/>
 GND to GPIO 18 / PIN 12
 
 #### Camera
@@ -118,7 +118,7 @@ make_image_classifier
 --labels_output_file class_labels.txt 
 --tflite_output_file tf_model_file.tflite
 ```
-You can use other models if you exchange the tfhub_module link to something else from the [tensorflow hub ](https://tfhub.dev/). Make sure you adjuste the image_size to your choosen model.
+You can use other models if you exchange the tfhub_module link to something else from the [tensorflow hub ](https://tfhub.dev/). Make sure you adjuste the image_size to your choosen model.<br/>
 In your base folder should now be a class_labels.txt and a tf_model_file.tflite file. Copy this to your Raspberry into the Coolometer folder.
 
 If you have a new model, make sure to share it with us by open a pull request with your model data.
