@@ -91,19 +91,19 @@ HAVE FUN :)
 
 The files contains our trained tensorflow lite model. The train data are our little secret. If you are not happy with it, here is a short description how to make your own model.
 
-On your host machine with Linux and Python3:
-
-pip install tensorflow
-pip install tensorflow-hub[make_image_classifier]
+On your host machine with Linux, Python3 and pip:
+```bash
+pip3 install tensorflow
+pip3 install tensorflow-hub[make_image_classifier]
+```
 
 Create a folder structure like the following one. And put picture into the cool / lame folder. Only JPG Files are allowed.
-
 Base Folder
 * coolometer (Folder)
     * cool (Folder)
-      img.jpg ...
+        * img.jpg ...
     * lame (Folder)
-        img.jpg ..
+        * img.jpg ..
 * model (Folder)
 
 
