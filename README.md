@@ -65,11 +65,52 @@ The camera is connected on the Raspberry Camera slot.
 
 
 ## Install
+Set up a Raspberry PI with [Raspberry Pi OS Lite](https://www.raspberrypi.org/software/operating-systems/) 
+[Enable SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/) and connect via SSH to the Raspberry
+Update System ( sudo apt full-upgrade)
+Run sudo raspi-config:
+- ADVANCED -> Resize File System
+- SYSTEM  -> AUDIO -> Headphone Jack
+- Interface -> Camera -> ON
+- Interface -> SPI -> ON
 
-TODO
+Set System volume with 
+```bash
+sudo amixer -q -M sset Headphone 100%
+```
+Install depenendices:
+```bash
+sudo apt-get install python3-pip python3-venv python3-pygame 
+libfreetype6-dev libjpeg-dev libopenjp2-7 libtiff5 libjpeg-dev libtiff5-dev libjasper-dev 
+libpng12-dev libavcodec-dev libavformat-dev libswscale-dev 
+libv4l-dev libxvidcore-dev libx264-dev qt4-dev-tools libatlas-base-dev 
+libilmbase-dev libopenexr-dev libgstreamer1.0-dev libgirepository1.0-dev libcairo2-dev
+```
+
+Install Python dependencies:
+```bash
+python3 -m pip install --user --upgrade pip
+python3 -m pip install --user virtualenv
+python3 -m venv env
+source env/bin/activate
+pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
+pip install -r requirements.txt
+```
+
+Create Autostart:
+```bash
+sudo nano /etc/rc.local 
+```
+add:
+```bash
+sudo sh /home/pi/CoolOMeter/run.sh &
+```
+
+Now Reboot the system. When booting is finished, you will hear 2 short noises from the speaker.
+You Coolometer should now work.
 
 ## 3D Print and Lasercut files
-TODO
+The Files are Available in the CAD-Zeichnungen folder.
 
 ## Usage
 

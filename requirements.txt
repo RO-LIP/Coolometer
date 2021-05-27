@@ -23,7 +23,7 @@ picamera==1.13
 Pillow==7.1.2
 pycrypto==2.6.1
 pyftdi==0.51.0
-pygame==1.9.4.post1
+pygame==1.9.6
 PyGObject==3.30.4
 pylint==2.5.1
 pyserial==3.4
@@ -39,7 +39,6 @@ smbus2==0.3.0
 spidev==3.4
 ssh-import-id==5.7
 tflite==2.1.0
-tflite-runtime @ https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
 toml==0.10.0
 typed-ast==1.4.1
 urllib3==1.24.1

@@ -68,7 +68,7 @@ if __name__ == '__main__':
 
     # show coolness
             pizWait.value = coolness
-            pointer.setservo(coolness * 180)
+            pointer.setservo((1-coolness) * 180)
             
     # if someone is extremly cool
             if coolness >= 0.9:
